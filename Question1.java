@@ -1,15 +1,15 @@
+import java.util.Scanner;
+
 public class Question1 {
     public static void main(String[] args) {
-        int rows = 5;
-        for (int i=1; i<=rows; i++){
-            for(int j=1; j<=i; j++){
-                System.out.print("*");
-            }
-            System.out.println();
-        }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        String name = scanner.nextLine();
+        System.out.println("Enter your age: ");
+        int age = scanner.nextInt();
+        System.out.println("Enter your country: ");
+        String country = scanner.next();
+
+        System.out.println("Welcome " + name +" Your age is " + age + "and you are from" + country);
     }
 }
-
-
-
-

@@ -1,24 +1,16 @@
+import java.util.Scanner;
+
 public class Question6 {
     public static void main(String[] args) {
-        int pizzaPrice = 200;
-        int puffsPrice = 40;
-        int pepsPrice = 120;
+        Scanner scanner = new Scanner(System.in);
 
-        int numPizzas = 5;
-        int numPuffs = 6;
-        int numPepsi = 2;
+        System.out.println("Enter first name: ");
+        String firstName = scanner.nextLine();
+        System.out.println("Enter last name: ");
+        String lastName = scanner.nextLine();
 
-        int totalPizzas = numPizzas * pizzaPrice;
-        int totalPuffs = numPuffs * puffsPrice;
-        int totalPepsi = numPepsi * pepsPrice;
+        String fullName = firstName + " " + lastName;
 
-        int grandTotal = totalPizzas + totalPuffs + totalPepsi;
-
-        System.out.println("Bill Details:");
-        System.out.println("Total Cost of Pizza RS : " + totalPizzas);
-        System.out.println("Total Cost of Puff Rs : " + totalPuffs);
-        System.out.println("Total Cost of Pepsi Rs : " + totalPepsi);
-        System.out.println("Grand Total : " + grandTotal);
-
+        System.out.println("Full Name: "+fullName);
     }
 }

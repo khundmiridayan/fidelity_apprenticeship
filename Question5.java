@@ -1,17 +1,27 @@
-import java.sql.PseudoColumnUsage;
+import java.util.Scanner;
 
 public class Question5 {
-    public static double calculateAverage(int[] numbers){
-        int sum = 0;
-        for(int number : numbers){
-            sum += number;
-        }
-        return (double)sum/numbers.length;
-    }
     public static void main(String[] args) {
-        int[] numbers = {1, 2, 3, 4, 5};
-        double average = calculateAverage(numbers);
-        System.out.println("Average: " + average);
+        Scanner scanner = new Scanner(System.in);
 
+        Account account = new Account();
+        System.out.println("Enter Account ID: ");
+        account.setId(scanner.nextInt());
+        System.out.println("Enter Account Type: ");
+        account.setAccountType(scanner.next());
+        System.out.println("Enter account balance");
+        account.setBalance(scanner.nextDouble());
+
+
+        System.out.println("Enter amount to withdraw");
+        double amount = scanner.nextDouble();
+        if (account.withdraw(amount)) {
+            System.out.println("Withdraw Successful. New Balance: " + account.getBalance());
+        }
+        else {
+            System.out.println("Insufficient balance..");
+
+        }
+        }
     }
-}
+

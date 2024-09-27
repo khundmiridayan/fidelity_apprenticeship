@@ -1,14 +1,17 @@
+import java.util.Scanner;
+
 public class Question2 {
-    public static void main(String[] args) {
-        for (int i=1; i<=4; i++){
-            System.out.println(generatePatternElement(i));
-        }
+    static double FindSquare(double num){
+        return num*num;
     }
-    public static String generatePatternElement(int n){
-        StringBuilder sb = new StringBuilder();
-        for (int i=1; i<=n; i++){
-            sb.append(i);
-        }
-        return sb.toString();
+    static double FindCube(double num){
+        return num*num*num;
+    }
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        double number = input.nextDouble();
+        System.out.println("Square of " + number + " is " + FindSquare(number));
+        System.out.println("Cube of " + number + " is " + FindCube(number));
     }
 }

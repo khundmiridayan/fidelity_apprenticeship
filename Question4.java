@@ -1,20 +1,10 @@
-import java.util.Scanner;
-
 public class Question4 {
-    public static boolean isEligibleToVote(int age){
-        return age >= 18;
-    }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your age: ");
-        int age = sc.nextInt();
-        if(isEligibleToVote(age)){
-            System.out.println("Eligible to vote");
-        }
-        else{
-            System.out.println("Not eligible to vote");
-        }
+        byte number = 125;
 
+        System.out.println("Value of number: " +number);
+
+        number = Byte.MAX_VALUE;
+        System.out.println("Largest value stored in a signed byte: " +number);
     }
-
 }

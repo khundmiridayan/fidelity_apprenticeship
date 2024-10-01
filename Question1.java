@@ -1,15 +1,46 @@
 import java.util.Scanner;
 
+
+class LinkedList{
+    Node head;
+
+    public void insertAtTail(int data){
+        Node newNode = new Node(data);
+        if(head == null){
+            head = newNode;
+        }else {
+            Node current = head;
+            while(current.next != null){
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+    }
+public void display(){
+    Node current = head;
+    while(current != null){
+    System.out.println(current.date);
+    current = current.next;
+    }
+}
+}
+
+
 public class Question1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your name: ");
-        String name = scanner.nextLine();
-        System.out.println("Enter your age: ");
-        int age = scanner.nextInt();
-        System.out.println("Enter your country: ");
-        String country = scanner.next();
+        LinkedList list = new LinkedList();
+        System.out.println("Enter the number of elements in the linked list: ");
+        int n = scanner.nextInt();
 
-        System.out.println("Welcome " + name +" Your age is " + age + "and you are from" + country);
+        for(int i = 0; i < n; i++){
+            System.out.println("enter data for node" + (i +1) + ":");
+            int data = scanner.nextInt();
+            list.insertAtTail(data);
+        }
+
+        System.out.println("The Linked List is: ");
+        list.display();
+        scanner.close();
     }
 }

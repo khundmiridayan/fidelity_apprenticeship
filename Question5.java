@@ -1,27 +1,61 @@
 import java.util.Scanner;
 
-public class Question5 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+class LinkedLists1 {
+    Node head;
 
-        Account account = new Account();
-        System.out.println("Enter Account ID: ");
-        account.setId(scanner.nextInt());
-        System.out.println("Enter Account Type: ");
-        account.setAccountType(scanner.next());
-        System.out.println("Enter account balance");
-        account.setBalance(scanner.nextDouble());
+    public void insertAtTail(int data) {
+        Node node = new Node(data);
 
+        if (head == null) {
+            head = node;
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = node;
 
-        System.out.println("Enter amount to withdraw");
-        double amount = scanner.nextDouble();
-        if (account.withdraw(amount)) {
-            System.out.println("Withdraw Successful. New Balance: " + account.getBalance());
-        }
-        else {
-            System.out.println("Insufficient balance..");
-
-        }
         }
     }
+    public void reverseList(){
+        Node current = head;
+        Node prev = null;
+        Node next = null;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+    head = prev;
+}
+public void printList(){
+    Node current = head;
+    while (current != null) {
+    System.out.print(current.date + " ");
+    current = current.next;
+    }
+    System.out.println();
+}
+}
 
+public class Question5 {
+    public static void main(String[] args) {
+        LinkedLists1 list = new LinkedLists1();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the number of elements in the list");
+        int n = scanner.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter the Element" + (i +1) + ":");
+            int data = scanner.nextInt();
+            list.insertAtTail(data);
+        }
+        System.out.println("Original  list is: ");
+        list.printList();
+
+        list.reverseList();
+        System.out.println("Reversed list is: ");
+        list.printList();
+    }
+}

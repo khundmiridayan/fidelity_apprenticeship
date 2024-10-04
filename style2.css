@@ -1,0 +1,49 @@
+hl {
+    text-align: center;
+    color: #FF00FF;
+    font-style: italic;
+  }
+  
+  table {
+    text-align: left;
+    margin-left: 35%;
+    background-color: #F0F0F0;
+  }
+  
+  td {
+    text-align: center;
+  }
+  
+  caption {
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .trlas {
+    background-color: #ff0080;
+  }
+  
+  .thead {
+    background-color: #800000;
+  }
+  
+  #ex1, #vg1 {
+    background-color: #00ff00;
+  }
+  
+  #gol {
+    background-color: #ffff00;
+  }
+  
+  #av1 {
+    background-color: #d3d3d3;
+  }
+  
+  #avl {
+    color: #ffffff;
+  }
+  
+  #bal {
+    background-color: #ff0000;
+    color: #ffffff;
+  }

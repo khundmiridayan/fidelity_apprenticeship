@@ -1,42 +1,99 @@
-body {
-    background-color: #00FFFF;
-    font-family: Arial;
-    font-size: 12px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #858585; /* Light gray background */
   }
   
   h1 {
-    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00698f; /* Dark blue heading color */
   }
   
-  dd {
-    font-size: 1.5em;
+  /* Form Styles */
+  
+  form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #17ee82; /* White form background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
   }
   
-  p[title] {
-    color: #FF0000;
-    font-size: 1.7em;
-    line-height: 1.5;
-  }
-  
-  .reasons {
-    color: #FF0F70;
+  label {
+    display: block;
+    margin-bottom: 10px;
     font-weight: bold;
-    line-height: 1.5;
-    font-size: 1.5em;
+    color: #333; /* Dark gray label text */
   }
   
-  .description01 {
-    font-style: italic;
-    color: #F500FF;
+  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
   }
   
-  .description07 {
-    font-style: italic;
-    color: #FF4500;
-    font-weight: bold;
+  input[type="radio"] {
+    margin-right: 10px;
   }
   
-  em {
-    color: #FF0000;
-    font-weight: bold;
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  input[type="submit"], input[type="reset"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #4CAF50; /* Green button background */
+    color: #ffffff; /* White button text */
+    border: none;
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+  
+  /* Range Input Styles */
+  
+  input[type="range"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+  }
+  
+  /* Other Styles */
+  
+  select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
   }
